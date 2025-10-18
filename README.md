@@ -1,6 +1,6 @@
 # Multi-Modal AI Systems: Architecture Analysis
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/yourusername/multi-modal-ai-systems/blob/main/app.py)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/DavidDeez/multi-modal-ai-systems/blob/main/app.py)
 
 Research project analyzing performance characteristics of modular pipeline vs. direct API architectures for multi-modal AI systems.
 
