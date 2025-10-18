@@ -29,7 +29,7 @@ This project implements and compares three architectural patterns for multi-moda
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/multi-modal-ai-systems.git
+git clone https://github.com/DavidDeez/multi-modal-ai-systems.git
 cd multi-modal-ai-systems
 
 # 2. Install dependencies
