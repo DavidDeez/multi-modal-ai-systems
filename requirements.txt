@@ -1,0 +1,5 @@
+gradio>=3.0.0
+requests>=2.25.0
+pydub>=0.25.0
+SpeechRecognition>=3.10.0
+python-dotenv>=0.19.0
