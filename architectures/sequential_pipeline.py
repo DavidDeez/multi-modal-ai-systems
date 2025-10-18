@@ -1,3 +1,4 @@
+import os
 import time
 from typing import Dict, Any
 from src.api_client import OpenAIClient
