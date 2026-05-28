@@ -6,17 +6,19 @@ from typing import Dict, Any
 
 class OpenAIClient:
     def __init__(self):
-        self.api_key = os.getenv("OPENAI_API_KEY")
-        if not self.api_key:
-            raise ValueError("OPENAI_API_KEY environment variable not set")
+        self.base_url = "https://openrouter.ai/api/v1/chat/completions"
         
-        self.base_url = "https://api.openai.com/v1/chat/completions"
-        self.headers = {
-            "Authorization": f"Bearer {self.api_key}",
+    @property
+    def headers(self):
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError("API Key is missing! Please enter it in the app.")
+        return {
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
         }
     
-    def text_completion(self, prompt: str, model: str = "gpt-4o-mini", max_tokens: int = 1000) -> str:
+    def text_completion(self, prompt: str, model: str = "openai/gpt-4o-mini", max_tokens: int = 1000) -> str:
         """Direct API call for text completion"""
         data = {
             "model": model,
@@ -41,7 +43,7 @@ class OpenAIClient:
         mime_type = mime_types.get(ext, 'image/jpeg')
         
         data = {
-            "model": "gpt-4o-mini",
+            "model": "openai/gpt-4o-mini",
             "messages": [
                 {
                     "role": "user",
